@@ -532,3 +532,19 @@ footer {
     height: 180px;
   }
 }
+
+
+
+/* ===== bp Section ===== */
+.bp-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.bp-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
