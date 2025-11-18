@@ -1,0 +1,91 @@
+/* ===== Page Header ===== */
+.contact-header {
+    text-align: center;
+    padding: 80px 40px 40px;
+    background: #F7F5F0;
+}
+
+.contact-title {
+    font-size: 42px;
+    font-weight: 700;
+    background: linear-gradient(45deg, #5A4FFF, #8AA9FF);
+    -webkit-background-clip: text;
+    color: transparent;
+    margin-bottom: 20px;
+}
+
+.contact-subtitle {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 18px;
+    color: #666;
+}
+
+
+/* ===== Form Container ===== */
+.contact-container {
+    max-width: 650px;
+    margin: 60px auto 120px;
+    padding: 0 40px;
+}
+
+/* Form block (white card) */
+.contact-form {
+    background: white;
+    padding: 40px 35px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    border: 1px solid rgba(90,79,255,0.12);
+}
+
+/* Input groups */
+.form-group {
+    margin-bottom: 28px;
+}
+
+.form-group label {
+    font-size: 15px;
+    font-weight: 600;
+    color: #444;
+    display: block;
+    margin-bottom: 8px;
+}
+
+/* Inputs */
+input, textarea {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 15px;
+    outline: none;
+    transition: 0.25s ease;
+}
+
+/* Focus 时紫蓝主色强调 */
+input:focus, 
+textarea:focus {
+    border-color: #8AA9FF;
+    box-shadow: 0 0 0 3px rgba(138, 169, 255, 0.3);
+}
+
+/* ===== Submit Button ===== */
+.submit-btn {
+    width: 100%;
+    padding: 16px;
+    font-size: 18px;
+    font-weight: 700;
+
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+
+    background: linear-gradient(135deg, #5A4FFF, #8AA9FF);
+    transition: 0.3s ease;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(135deg, #4E44E2, #7A93FF);
+}

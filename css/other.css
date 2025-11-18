@@ -1,0 +1,73 @@
+/* ===== Page Header ===== */
+.exclusive-header {
+    text-align: center;
+    padding: 80px 40px 40px;
+    background: #F7F5F0;
+}
+
+.exclusive-title {
+    font-size: 48px;
+    font-weight: 700;
+    background: linear-gradient(45deg, #5A4FFF, #8AA9FF);
+    -webkit-background-clip: text;
+    color: transparent;
+    margin-bottom: 20px;
+}
+
+.exclusive-subtitle {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 18px;
+    color: #555;
+    opacity: 0.9;
+}
+
+/* ===== Content Wrapper ===== */
+.exclusive-content {
+    max-width: 900px;
+    margin: 70px auto;
+    padding: 0 40px;
+}
+
+/* ===== Each section block ===== */
+.exclusive-block {
+    background: white;
+    border-radius: 20px;
+    padding: 30px 35px 40px;
+    margin-bottom: 50px;
+
+    box-shadow: 0 10px 28px rgba(0,0,0,0.08);
+    border: 1px solid rgba(90,79,255,0.10);
+}
+
+/* 金色编号 */
+.ex-num {
+    font-size: 34px;
+    font-weight: 800;
+    color: #b59d58;
+    margin-bottom: 12px;
+}
+
+/* 小标题 */
+.ex-heading {
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* case 标题 */
+.ex-case-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 18px 0 8px;
+    color: #5A4FFF;
+}
+
+/* 内容文字 */
+.ex-text {
+    font-size: 16px;
+    line-height: 1.75;
+    color: #555;
+    margin-bottom: 12px;
+}

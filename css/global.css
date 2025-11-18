@@ -1,0 +1,734 @@
+/* ===========================
+   Header (Logo section)
+   =========================== */
+.top-header {
+    background: white;
+    height: 110px; /* 可调整 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #eee;
+}
+
+.header-logo {
+    height: 80px;   /* Logo 高度，这样不容易撑开 */
+    width: auto;
+    object-fit: contain;
+    display: block;
+}
+
+/* ===========================
+   Main Navigation Bar
+   =========================== */
+.main-nav {
+    height: 60px;
+    background: #2A0A2C;  /* 深紫色，专业又跟整体配色搭 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 50px;
+    list-style: none;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s ease;
+}
+
+.nav-menu a:hover {
+    background: linear-gradient(45deg, #F7A27C, #D74C6F, #8AA9FF);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/* ===========================
+   FOOTER: Two-column layout
+   =========================== */
+
+.footer {
+    background: #2A0A2C;      /* 深紫灰 */
+    color: #ffffff;
+    padding: 70px 40px;
+    margin-top: 10px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    flex-wrap: wrap; /* 适配手机 */
+}
+
+/* 左列 */
+.footer-left {
+    max-width: 600px;
+}
+
+.footer-slogan {
+    font-size: 17px;
+    line-height: 1.7;
+    opacity: 0.95;
+}
+
+/* 右列 */
+.footer-right {
+    text-align: right;
+}
+
+.footer-contact {
+    font-size: 15px;
+    opacity: 0.9;
+    margin-bottom: 15px;
+}
+
+.footer-contact a {
+    color: #F7A27C;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.footer-contact a:hover {
+    text-decoration: underline;
+}
+
+.footer-copy {
+    font-size: 13px;
+    opacity: 0.6;
+    margin-top: 10px;
+}
+
+
+/* ===========================
+   首页介绍区块（导航栏下）
+   =========================== */
+
+/* ===========================
+   Stats Highlight Card
+   =========================== */
+
+.stats-section {
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+}
+
+.stats-card {
+    background: #f7f5ec;
+    padding: 40px 60px;
+    border-radius: 20px;
+    max-width: 1200px;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+/* 单个条目 */
+.stat-item {
+    flex: 1;
+}
+
+/* 大号数字 */
+.stat-item h3 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #b59d58;          /* 金色系，更专业 */
+    margin-bottom: 8px;
+}
+
+/* 小标题 */
+.stat-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* 描述文字 */
+.stat-text {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #666;
+}
+
+
+/* ===========================
+   顶部公司标题 + 简介
+   =========================== */
+
+.company-header {
+    margin-top: 80px;
+    text-align: center;
+    padding: 0 40px;
+}
+
+.company-title {
+    font-size: 42px;
+    font-weight: 700;
+    background: linear-gradient(45deg, #ff8ccf, #8fc7ff);
+    -webkit-background-clip: text;
+    color: transparent;
+    margin-bottom: 20px;
+}
+
+.company-desc {
+    max-width: 900px;
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 1.7;
+    color: #dddddd;
+    opacity: 0.9;
+}
+
+
+/* ===========================
+   四格亮点白色卡片
+   =========================== */
+
+.stats-section {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.stats-card {
+    background: #f7f5ec;
+    padding: 40px 60px;
+    border-radius: 20px;
+    max-width: 1200px;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.stat-item {
+    flex: 1;
+}
+
+.stat-item h3 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #b59d58; 
+    margin-bottom: 8px;
+}
+
+.stat-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.stat-text {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #666;
+}
+
+
+/* 按钮容器（靠右） */
+.title-btn-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 80px;   /* 可调整位置 */
+}
+
+/* 按钮本体 */
+.title-about-btn {
+    display: inline-block;
+    padding: 14px 32px;
+    font-size: 18px;
+    font-weight: 600;
+
+    background: linear-gradient(135deg, #F7A27C, #8AA9FF);
+    color: black;
+    text-decoration: none;
+
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+
+.title-about-btn:hover {
+    transform: translateY(-3px);
+    opacity: 0.9;
+}
+
+/* ===== Unified Section Title（通用渐变大标题） ===== */
+
+.section-title {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 700;
+    margin: 70px 0 40px;
+    background: linear-gradient(45deg, #5A4FFF, #8FA3FF);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/* Our Business 特调间距（让过渡更自然） */
+.business-main-title {
+    margin-top: 80px;    /* 与上方 stats 卡片拉开距离 */
+    margin-bottom: 30px; /* 更靠近橙色块 */
+}
+
+
+
+/* ===========================
+   OUR BUSINESS 区块
+   =========================== */
+
+.business-section {
+    text-align: center;
+    padding: 80px 40px;
+    background: #e49f55; /* 你图中类似橘色背景 */
+}
+
+.business-title {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 50px;
+    color: #000;
+}
+
+/* 四宫格布局 */
+.business-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+/* 卡片外框 */
+.business-card {
+    width: 260px;
+    background: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+
+    cursor: pointer;
+    transition: 0.2s ease;
+    position: relative;
+}
+
+
+
+/* 编号 */
+.card-number {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #2aa4d4;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+/* 底部标签 */
+.card-label {
+    font-size: 20px;
+    font-weight: 700;
+    padding: 12px;
+    text-align: center;
+    border-radius: 6px;
+    margin-top: 12px;
+    color: #002244;
+}
+
+/* 色板 */
+.label-blue { background: #a0eff0; }
+.label-yellow { background: #ffe680; }
+.label-blue2 { background: #85b8ff; }
+.label-pink { background: #f7c5d7; }
+
+/* ===========================
+   震动 hover 效果 (DeNA 风格)
+   =========================== */
+
+/* hover 黑科技：微震+轻微放大 */
+.business-card:hover {
+    transform: scale(1.04);
+}
+
+
+.card-img-wrapper {
+    width: 100%;
+    height: 260px;        /* 👈 可调整你喜欢的高度 */
+    overflow: hidden;     /* 超出则裁剪 */
+    border-radius: 6px;   /* 可选，让边角更美观 */
+    position: relative;
+}
+
+.business-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;    /* 🤩 强制裁剪为统一比例 */
+    object-position: center;
+    display: block;
+}
+/* 卡片默认倾斜 */
+.tilt-1 { transform: rotate(-4deg); }
+.tilt-2 { transform: rotate(3deg); }
+.tilt-3 { transform: rotate(-2deg); }
+.tilt-4 { transform: rotate(4deg); }
+
+.business-card {
+    transition: transform 0.28s ease, box-shadow 0.28s ease;
+    transform-origin: center center;
+}
+
+/* hover 时恢复正 + 放大 */
+.business-card:hover {
+    transform: rotate(0deg) scale(1.05);
+    box-shadow: 0 10px 24px rgba(0,0,0,0.25);
+}
+/* ====== Global IP Partnerships Section ====== */
+
+.ip-section {
+    padding: 80px 40px;
+    text-align: center;
+    background: #000;
+    color: white;
+}
+
+.ip-title {
+    font-size: 36px;
+    margin-bottom: 50px;
+    font-weight: 600;
+}
+
+
+
+/* ===== GLOBAL IP PARTNERS — 浅色统一风格 ===== */
+
+.ip-section {
+    padding: 80px 40px;
+    text-align: center;
+
+    background: #F7F5F0; /* 与 Stats 卡片统一的浅背景 */
+    color: #222;
+}
+
+.ip-title {
+    font-size: 36px;
+    margin-bottom: 50px;
+    font-weight: 700;
+    background: linear-gradient(45deg, #5A4FFF, #8FA3FF); /* 与前面标题统一 */
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/* Grid */
+.ip-grid {
+    display: grid;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+
+    grid-template-columns: repeat(5, 1fr);
+    gap: 60px 25px;
+    justify-items: center;
+}
+
+/* 卡片 */
+.ip-card {
+    width: 100%;
+    max-width: 220px;
+
+    background: white; 
+    border-radius: 20px;
+
+    padding: 30px 20px;
+    transition: 0.25s ease;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    border: 1px solid rgba(90, 79, 255, 0.1); /* 紫蓝极淡边框 */
+}
+
+.ip-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.18);
+    border-color: rgba(90,79,255,0.25);
+}
+
+/* 圆头像 */
+.ip-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 15px;
+
+    border: 3px solid rgba(90,79,255,0.25);  /* 淡紫蓝边框 */
+    transition: 0.3s ease;
+}
+
+.ip-card:hover .ip-img {
+    border-color:  #8AA9FF; /* hover 强调紫蓝主色 */
+}
+
+/* 文本 */
+.ip-name {
+    font-size: 18px;
+    font-weight: 700;
+    color:  #8AA9FF; /* 主色 */
+    margin-bottom: 6px;
+}
+
+.ip-country {
+    font-size: 15px;
+    font-weight: 600;
+    color: #555;
+}
+
+.ip-desc {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+    margin-top: 6px;
+}
+
+.ip-note {
+    margin-top: 40px;
+    color: #777;
+    font-style: italic;
+    font-size: 14px;
+}
+
+/* ===========================
+   平板：变成 3 列
+   =========================== */
+@media (max-width: 1100px) {
+    .ip-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* ===========================
+   小平板：变成 2 列
+   =========================== */
+@media (max-width: 800px) {
+    .ip-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .ip-img {
+        width: 130px;
+        height: 130px;
+    }
+}
+
+/* ===========================
+   手机：1 列
+   =========================== */
+@media (max-width: 550px) {
+    .ip-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .ip-img {
+        width: 110px;
+        height: 110px;
+    }
+
+    .ip-title {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+}
+/* ===== TEAM SECTION — 与 IP 区块统一的浅色风格 ===== */
+
+.team-section {
+    padding: 80px 40px;
+    text-align: center;
+    background: #e49f55; /* 与 IP 同背景 */
+}
+
+/* 标题 */
+.team-title {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 60px;
+
+    background: linear-gradient(45deg, #5A4FFF, #8AA9FF);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/* Grid 布局 */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Card：改为白卡 + 阴影 + 淡紫蓝边框 */
+.team-card {
+    background: white;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    border: 1px solid rgba(90,79,255,0.1);
+
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+/* Hover 卡片浮起 */
+.team-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.18);
+    border-color: rgba(90,79,255,0.25);
+}
+
+/* 照片 wrapper */
+.team-photo-wrapper {
+    width: 100%;
+    height: 260px;
+    overflow: hidden;
+    border-radius: 14px;
+}
+
+.team-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.4s ease;
+}
+
+/* Hover → 图片变暗 */
+.team-card:hover .team-photo {
+    filter: brightness(70%);
+    transform: scale(1.05);
+}
+
+/* 简介 overlay：保持你的 hover 介绍，但风格改成白卡风 */
+.team-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(255,255,255,0.75);
+    backdrop-filter: blur(4px);
+    opacity: 0;
+    transition: 0.3s;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.team-intro {
+    max-width: 75%;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #444;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: 0.4s ease;
+}
+.team-photo-wrapper {
+    position: relative;
+    width: 100%;
+    height: 260px;
+    overflow: hidden;
+    border-radius: 14px;
+}
+
+
+/* Hover：文字出现 */
+.team-card:hover .team-overlay {
+    opacity: 1;
+}
+
+.team-card:hover .team-intro {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 名字 */
+.team-name {
+    font-size: 20px;
+    font-weight: 700;
+    color: #8AA9FF; /* 与 IP 一致 */
+    margin-top: 16px;
+}
+
+/* 职位 */
+.team-role {
+    font-size: 15px;
+    color: #777;
+}
+
+/* Responsive 适配 */
+@media (max-width: 1000px) {
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+    .team-photo-wrapper {
+        height: 240px;
+    }
+}
+
+/* ===== PARTNERS SECTION — 深色统一风格 ===== */
+.partners-section {
+    padding: 80px 40px;
+    background: #F7F5F0;;
+    text-align: center;
+}
+
+.partners-title {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 40px;
+
+    background: linear-gradient(45deg, #5A4FFF, #8AA9FF);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/* 卡片容器 */
+.partner-wrapper {
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 30px;
+    
+    background: #111;                     /* 深灰卡片 */
+    border-radius: 16px;                  /* 圆角 */
+    border: 1px solid rgba(242,197,124,0.25); /* 金色淡边框 */
+    box-shadow: 0 10px 35px rgba(0,0,0,0.4);  /* 高端阴影 */
+}
+
+/* 图片 */
+.partner-img {
+    width: 100%;
+    border-radius: 12px;
+    display: block;
+}
+
+.section-wrapper {
+    background: #F7F5F0;
+    padding: 60px 0;
+}
+
+.team-main-title {
+    /* 不要写 background，不要覆盖渐变 */
+}
