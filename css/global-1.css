@@ -2,90 +2,153 @@
     font-family: "Poppins", "PingFang SC", "Microsoft YaHei", sans-serif;
 }
 
-
-/* Sticky 整体容器 */
 .sticky-header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
+    background: #ffffff;
     z-index: 9999;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-/* 导航栏主体（黄色） */
-.main-nav {
-    background: #F7CF46;
-    height: 90px;
+/* 防止内容被头部遮住 */
+body {
+    padding-top: 170px;
+}
+
+
+/* ===========================
+   Header (Logo section)
+   =========================== */
+/* ===========================
+   Header (Logo section)
+   =========================== */
+.top-header {
+    background: #ffffff;
+    height: 110px; 
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 0 40px;
+    justify-content: center;
+    border-bottom: 1px solid #eee;
 }
 
-/* LOGO 大小 */
 .header-logo {
-    height: 55px;
+    height: 80px;  
     width: auto;
+    object-fit: contain;
     display: block;
 }
 
-/* 菜单区（右对齐） */
-.nav-menu {
-    list-style: none;           /* 去掉圆点 */
-    padding: 0;
-    margin: 0;
+
+/* ===========================
+   Main Navigation Bar
+   =========================== */
+.main-nav {
+    height: 60px;
+    background: #F7CF46;
     display: flex;
     align-items: center;
+    justify-content: center;
+    position: relative; /* 按钮在内部定位 */
+    width: 100%;
+}
+
+
+.nav-menu {
+    display: flex;
     gap: 50px;
+    list-style: none;
 }
 
-/* 菜单链接 */
 .nav-menu a {
-    font-weight: 600;
     color: #1A1A1A;
-    font-size: 16px;
     text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s ease;
 }
 
-/* 小屏幕按钮（默认隐藏） */
+.nav-menu a:hover {
+    background: linear-gradient(45deg, #5A4FFF, #8AA9FF);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/* === 汉堡按钮 === */
 .hamburger {
     display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #1A1A1A;
+    position: absolute;
+    left: 20px;
+    top: 15px;
 }
 
-/* 小屏幕布局 */
+/* === 小屏幕适配 === */
 @media (max-width: 768px) {
 
-    .hamburger {
-        display: block;
-        font-size: 28px;
-        cursor: pointer;
+    /* 让顶栏高度够放下汉堡 */
+    .top-header {
+        position: relative;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
+    /* 显示汉堡按钮 */
+    .hamburger {
+        display: block;
+    }
+
+    /* 隐藏菜单（默认） */
     .nav-menu {
         display: none;
         flex-direction: column;
+        gap: 20px;
+        list-style: none;
         width: 100%;
         background: #F7CF46;
         text-align: center;
         padding: 20px 0;
         position: absolute;
+        top: 60px;
         left: 0;
-        top: 90px;
     }
 
+    /* 点击展开 */
     .nav-menu.open {
         display: flex;
     }
 }
 
+/* 遮罩层（默认隐藏） */
+.nav-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4); /* 半透明黑色 */
+    z-index: 10;
+}
+
+/* Mobile 打开菜单时显示 */
+@media (max-width: 768px) {
+    .nav-menu.open + .nav-overlay {
+        display: block;
+    }
+}
 
 
-/* ============================================
+/* ===========================
    FOOTER
-============================================ */
+   =========================== */
 
 .footer {
-    background: #F7CF46;
+    background: #F7CF46;     
     color: #1A1A1A;
     padding: 70px 40px;
     margin-top: 10px;
@@ -120,11 +183,11 @@
     font-size: 15px;
     opacity: 0.9;
     margin-bottom: 15px;
-    color: #1A1A1A;
+    color: #666;
 }
 
 .footer-contact a {
-    color: #F7CF46;
+    color: #5A4FFF;
     text-decoration: none;
     font-weight: 500;
 }
@@ -137,13 +200,12 @@
     font-size: 13px;
     opacity: 0.6;
     margin-top: 10px;
-    color: #1A1A1A;
+    color: #666;
 }
 
-
-/* ============================================
-   STATS CARD (你原有的)
-============================================ */
+/* ===========================
+   Stats Highlight Card
+   =========================== */
 
 .stats-section {
     margin-top: 80px;
@@ -152,7 +214,7 @@
 }
 
 .stats-card {
-    background: #1A1A1A;
+    background: #F7F5EF;
     padding: 40px 60px;
     border-radius: 20px;
     max-width: 1200px;
@@ -169,27 +231,26 @@
 .stat-item h3 {
     font-size: 32px;
     font-weight: 700;
-    color: #E9B132;
+    color: #E9B132; /* 金暖色 */
     margin-bottom: 8px;
 }
 
 .stat-title {
     font-size: 16px;
     font-weight: 600;
-    color: #ffffff;
+    color: #666;
     margin-bottom: 10px;
 }
 
 .stat-text {
     font-size: 14px;
     line-height: 1.6;
-    color: #ffffff;
+    color: #666;
 }
 
-
-/* ============================================
-   COMPANY HEADER
-============================================ */
+/* ===========================
+   顶部公司标题 + 简介
+   =========================== */
 
 .company-header {
     margin-top: 80px;
@@ -200,7 +261,7 @@
 .company-title {
     font-size: 42px;
     font-weight: 700;
-    background: linear-gradient(45deg, #F7CF46, #F7CF46);
+    background: linear-gradient(45deg, #5A4FFF, #8AA9FF);
     -webkit-background-clip: text;
     color: transparent;
     margin-bottom: 20px;
@@ -211,29 +272,67 @@
     margin: 0 auto;
     font-size: 18px;
     line-height: 1.7;
-    color: #1A1A1A;
+    color: #666;
     opacity: 0.9;
 }
 
+/* ===========================
+   亮点白卡片区块（第二段重复保留）
+   =========================== */
 
-/* ============================================
-   BUTTON
-============================================ */
+.stats-section {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
 
+.stats-card {
+    background: #F7F5EF;
+    padding: 40px 60px;
+    border-radius: 20px;
+    max-width: 1200px;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.stat-item h3 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #E9B132;
+    margin-bottom: 8px;
+}
+
+.stat-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #666;
+}
+
+.stat-text {
+    font-size: 14px;
+    color: #666;
+}
+
+/* 按钮容器 */
 .title-btn-wrapper {
     display: flex;
     justify-content: flex-end;
     padding-right: 80px;
 }
 
+/* 按钮 */
 .title-about-btn {
     display: inline-block;
     padding: 14px 32px;
     font-size: 18px;
     font-weight: 600;
-    background: #F7CF46;
-    color: #1A1A1A;
+
+    background: linear-gradient(135deg, #5A4FFF, #8AA9FF);
+    color: #fff;
     text-decoration: none;
+
     border-radius: 10px;
     transition: 0.3s ease;
 }
@@ -243,18 +342,14 @@
     opacity: 0.9;
 }
 
-
-
-/* ============================================
-   SECTION TITLE
-============================================ */
+/* Section 通用大标题 */
 
 .section-title {
     text-align: center;
     font-size: 40px;
     font-weight: 700;
     margin: 70px 0 40px;
-    background: linear-gradient(45deg, #F7CF46, #F7CF46);
+    background: linear-gradient(45deg, #5A4FFF, #8AA9FF);
     -webkit-background-clip: text;
     color: transparent;
 }
@@ -263,55 +358,6 @@
     margin-top: 80px;
     margin-bottom: 30px;
 }
-
-
-/* ============================================================
-   🚀 DARK MODE OVERRIDE — 导航栏以下全部黑底白字
-============================================================ */
-
-body {
-    background: #000 !important;
-}
-
-/* 所有主内容区黑底白字 */
-section,
-.company-header,
-.stats-section,
-.stats-card {
-    background: #000 !important;
-    color: #fff !important;
-}
-
-/* 公司介绍文字变白 */
-.company-desc {
-    color: #fff !important;
-    opacity: 1 !important;
-}
-
-/* 第二段 stats-card 白色版本 → 黑色 */
-.stats-card {
-    background: #000 !important;
-    border: 1px solid rgba(255,255,255,0.2) !important;
-}
-
-/* 白文字 */
-.stat-title,
-.stat-text {
-    color: #fff !important;
-}
-
-/* 保留黄色数字 */
-.stat-item h3 {
-    color: #E9B132 !important;
-}
-
-/* 黄色按钮保持 */
-.title-about-btn {
-    background: #F7CF46 !important;
-    color: #1A1A1A !important;
-}
-
-
 
 /* ===========================
    OUR BUSINESS
@@ -355,7 +401,7 @@ section,
     position: absolute;
     top: 10px;
     right: 10px;
-    color: #F7CF46;
+    color: #5A4FFF;
     font-weight: 700;
     font-size: 16px;
 }
@@ -371,9 +417,9 @@ section,
     color: #1A1A1A;
 }
 
-.label-blue  { background: #F7CF46; }
+.label-blue  { background: #8AA9FF; }
 .label-yellow { background: #F7CF46; }
-.label-blue2 { background: #F7CF46; color: #ffffff; }
+.label-blue2 { background: #5A4FFF; color: #ffffff; }
 .label-pink { background: #E9B132; }
 
 /* Hover 保留原动画 */
@@ -421,7 +467,7 @@ section,
 .ip-section {
     padding: 80px 40px;
     text-align: center;
-    background: #ffffff;
+    background: #F7F5EF;
     color: #222;
 }
 
@@ -429,7 +475,7 @@ section,
     font-size: 36px;
     margin-bottom: 50px;
     font-weight: 700;
-    background: linear-gradient(45deg, #F7CF46, #F7CF46);
+    background: linear-gradient(45deg, #5A4FFF, #8AA9FF);
     -webkit-background-clip: text;
     color: transparent;
 }
@@ -475,31 +521,31 @@ section,
 }
 
 .ip-card:hover .ip-img {
-    border-color: #F7CF46;
+    border-color: #8AA9FF;
 }
 
 .ip-name {
     font-size: 18px;
     font-weight: 700;
-    color: #F7CF46;
+    color: #5A4FFF;
     margin-bottom: 6px;
 }
 
 .ip-country {
     font-size: 15px;
     font-weight: 600;
-    color: #1A1A1A;
+    color: #666;
 }
 
 .ip-desc {
     font-size: 14px;
-    color: #1A1A1A;
+    color: #666;
 
 }
 
 .ip-note {
     margin-top: 40px;
-    color: #1A1A1A;
+    color: #666;
     font-style: italic;
     font-size: 14px;
 }
@@ -560,7 +606,7 @@ section,
     font-size: 36px;
     font-weight: 700;
     margin-bottom: 60px;
-    background: linear-gradient(45deg, #F7CF46, #F7CF46);
+    background: linear-gradient(45deg, #5A4FFF, #8AA9FF);
     -webkit-background-clip: text;
     color: transparent;
 }
@@ -647,13 +693,13 @@ section,
 .team-name {
     font-size: 20px;
     font-weight: 700;
-    color: #F7CF46;
+    color: #5A4FFF;
     margin-top: 16px;
 }
 
 .team-role {
     font-size: 15px;
-    color: #1A1A1A;
+    color: #666;
 }
 /* Responsive 适配 */
 @media (max-width: 1000px) {
@@ -677,7 +723,7 @@ section,
 
 .partners-section {
     padding: 80px 40px;
-    background: #ffffff;
+    background: #F7F5EF;
     text-align: center;
 }
 
@@ -685,7 +731,7 @@ section,
     font-size: 36px;
     font-weight: 700;
     margin-bottom: 40px;
-    background: linear-gradient(45deg, #F7CF46, #F7CF46);
+    background: linear-gradient(45deg, #5A4FFF, #8AA9FF);
     -webkit-background-clip: text;
     color: transparent;
 }
@@ -708,7 +754,7 @@ section,
 }
 
 .section-wrapper {
-    background: #ffffff;
+    background: #F7F5EF;
     padding: 60px 0;
 }
 
@@ -717,4 +763,3 @@ section,
 {
     text-align: left !important;
 }
-

@@ -8,7 +8,7 @@
 .exclusive-title {
     font-size: 48px;
     font-weight: 700;
-    background: linear-gradient(45deg, #5A4FFF, #8AA9FF);
+    background: linear-gradient(45deg, #E9B132, #F7CF46);
     -webkit-background-clip: text;
     color: transparent;
     margin-bottom: 20px;
@@ -18,7 +18,7 @@
     max-width: 800px;
     margin: 0 auto;
     font-size: 18px;
-    color: #555;
+    color: #fff;
     opacity: 0.9;
 }
 
@@ -61,13 +61,13 @@
     font-size: 18px;
     font-weight: 700;
     margin: 18px 0 8px;
-    color: #5A4FFF;
+    color: #E9B132;
 }
 
 /* 内容文字 */
 .ex-text {
     font-size: 16px;
     line-height: 1.75;
-    color: #555;
+    color: #666;
     margin-bottom: 12px;
 }

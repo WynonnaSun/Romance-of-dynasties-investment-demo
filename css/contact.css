@@ -8,7 +8,7 @@
 .contact-title {
     font-size: 42px;
     font-weight: 700;
-    background: linear-gradient(45deg, #5A4FFF, #8AA9FF);
+    background: linear-gradient(45deg, #E9B132, #F7CF46);
     -webkit-background-clip: text;
     color: transparent;
     margin-bottom: 20px;
@@ -18,7 +18,7 @@
     max-width: 700px;
     margin: 0 auto;
     font-size: 18px;
-    color: #666;
+    color: #fff;
 }
 
 
@@ -65,7 +65,7 @@ input, textarea {
 /* Focus 时紫蓝主色强调 */
 input:focus, 
 textarea:focus {
-    border-color: #8AA9FF;
+    border-color: #F7CF46;
     box-shadow: 0 0 0 3px rgba(138, 169, 255, 0.3);
 }
 
@@ -81,11 +81,11 @@ textarea:focus {
     cursor: pointer;
     color: white;
 
-    background: linear-gradient(135deg, #5A4FFF, #8AA9FF);
+    background: linear-gradient(135deg, #E9B132, #F7CF46);
     transition: 0.3s ease;
 }
 
 .submit-btn:hover {
     transform: translateY(-2px);
-    background: linear-gradient(135deg, #4E44E2, #7A93FF);
+    background: linear-gradient(135deg, #E9B132, #F7CF46);
 }
