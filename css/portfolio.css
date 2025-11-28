@@ -47,7 +47,7 @@ body {
     font-size: 36px;
     margin-bottom: 50px;
     font-weight: 700;
-    background: linear-gradient(45deg, #5A4FFF, #8AA9FF);
+    background: linear-gradient(45deg, #E9B132, #F7CF46);
     -webkit-background-clip: text;
     color: transparent;
 }
@@ -95,15 +95,15 @@ body {
     background: #fff;
     border-radius: 20px;
     padding: 30px 20px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
-    border: 1px solid rgba(90,79,255,0.1);
+    box-shadow: 0 8px 20px #F7F5EF(0,0,0,0.12);
+    border: 1px solid #F7F5EF(90,79,255,0.1);
     transition: 0.25s ease;
 }
 
 .merch-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 12px 28px rgba(0,0,0,0.18);
-    border-color: rgba(90,79,255,0.25);
+    box-shadow: 0 12px 28px #F7F5EF(0,0,0,0.18);
+    border-color: #F7F5EF(90,79,255,0.25);
 }
 
 /* 圆形图片 */
@@ -115,12 +115,12 @@ body {
     object-fit: cover;
     border-radius: 12px;        /* 微圆角 */
     margin: 0 auto 20px;
-    border: 3px solid rgba(90,79,255,0.25);
+    border: 3px solid #F7F5EF(90,79,255,0.25);
     transition: 0.3s ease;
 }
 
 .merch-card:hover .merch-img {
-    border-color: #8AA9FF;
+    border-color: #F7CF46;
 }
 
 
@@ -128,7 +128,7 @@ body {
 .merch-name {
     font-size: 18px;
     font-weight: 700;
-    background: linear-gradient(45deg, #5A4FFF, #8AA9FF);
+    background: linear-gradient(45deg, #E9B132, #F7CF46);
     -webkit-background-clip: text;
     color: transparent;
     margin-bottom: 6px;
@@ -188,7 +188,7 @@ body {
 .overlay {
     position: absolute;
     inset: 0;
-    background: rgba(0,0,0,0.45);
+    background: #F7F5EF(0,0,0,0.45);
     opacity: 0;
     transition: 0.3s;
     z-index: 2;
@@ -249,7 +249,7 @@ body {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(255,255,255,0.6);
+    background: #F7F5EF(255,255,255,0.6);
     border: none;
     padding: 12px 16px;
     cursor: pointer;
