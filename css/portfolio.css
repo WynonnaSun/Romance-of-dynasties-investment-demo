@@ -1,0 +1,286 @@
+/* ================================
+   General
+================================ */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.stores-section {
+    background: #F6CF4E;   /* 黄色背景 */
+    padding: 40px 60px;
+    color: #000;
+}
+
+.stores-title {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+/* ================================
+   上方两个：布局
+================================ */
+.stores-top {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.store-card {
+    width: 50%;
+    position: relative;
+}
+
+/* ================================
+   Merchandise Section (Styled)
+================================ */
+.merch-section {
+    background: #F7F5EF; /* 同参考配色 */
+    padding: 80px 40px;
+    text-align: center;
+    color: #222;
+}
+
+.merch-title {
+    font-size: 36px;
+    margin-bottom: 50px;
+    font-weight: 700;
+    background: linear-gradient(45deg, #5A4FFF, #8AA9FF);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/* ================================
+   Responsive Grid
+================================ */
+.merch-grid {
+    display: grid;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    gap: 50px 25px;
+    justify-items: center;
+}
+
+/* 大屏：3 列 */
+@media (min-width: 1024px) {
+    .merch-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* 中屏：2 列 */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .merch-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* 小屏：1 列 */
+@media (max-width: 767px) {
+    .merch-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+    }
+}
+
+/* ================================
+   Card Style (参考你给的 UI)
+================================ */
+.merch-card {
+    width: 100%;
+    max-width: 300px;
+    background: #fff;
+    border-radius: 20px;
+    padding: 30px 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    border: 1px solid rgba(90,79,255,0.1);
+    transition: 0.25s ease;
+}
+
+.merch-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.18);
+    border-color: rgba(90,79,255,0.25);
+}
+
+/* 圆形图片 */
+/* 改成 3：4 商品长方形图 */
+.merch-img {
+    width: 100%;
+    max-width: 260px;
+    aspect-ratio: 3 / 4;      
+    object-fit: cover;
+    border-radius: 12px;        /* 微圆角 */
+    margin: 0 auto 20px;
+    border: 3px solid rgba(90,79,255,0.25);
+    transition: 0.3s ease;
+}
+
+.merch-card:hover .merch-img {
+    border-color: #8AA9FF;
+}
+
+
+/* 商品名称（渐变蓝紫） */
+.merch-name {
+    font-size: 18px;
+    font-weight: 700;
+    background: linear-gradient(45deg, #5A4FFF, #8AA9FF);
+    -webkit-background-clip: text;
+    color: transparent;
+    margin-bottom: 6px;
+}
+
+/* 类别国家/描述 */
+.merch-category {
+    font-size: 15px;
+    font-weight: 600;
+    color: #666;
+    margin-bottom: 6px;
+}
+
+.merch-desc {
+    font-size: 14px;
+    color: #666;
+}
+
+
+
+/* ================================
+   上方两个：Slider（瞬间切图）
+================================ */
+.slider {
+    position: relative;
+    width: 100%;
+    height: 330px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* 图片叠放 */
+.slides {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.slides img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 330px;
+    object-fit: cover;
+    opacity: 0;
+    transition: none; /* 无动画，瞬间切换 */
+}
+
+/* 当前显示的 */
+.slides img.active {
+    opacity: 1;
+}
+
+/* ================================
+   上方两个：悬浮蒙版 + 文案
+================================ */
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    opacity: 0;
+    transition: 0.3s;
+    z-index: 2;
+}
+
+.slider:hover .overlay {
+    opacity: 1;
+}
+
+.overlay-text {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: #fff;
+    font-size: 26px;
+    font-weight: 600;
+    opacity: 0;
+    transition: 0.3s;
+    z-index: 3;
+}
+
+.slider:hover .overlay-text {
+    opacity: 1;
+}
+
+/* ================================
+   下方 Banner：基本结构
+================================ */
+.store-banner {
+    width: 100%;
+}
+
+.banner-slider {
+    position: relative;
+    width: 100%;
+    height: 380px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* 横向轮播 */
+.banner-slides {
+    display: flex;
+    width: 300%; /* 若 3 张图 */
+    transition: transform 0.6s ease;
+}
+
+.banner-slides img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+}
+
+/* ================================
+   下方 Banner：箭头
+================================ */
+.banner-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255,255,255,0.6);
+    border: none;
+    padding: 12px 16px;
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 3;
+}
+
+.banner-arrow.left { left: 15px; }
+.banner-arrow.right { right: 15px; }
+
+/* ================================
+   下方 Banner：中间黄色标签
+================================ */
+.banner-label {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #FFD447;
+    padding: 14px 40px;
+    font-size: 24px;
+    font-weight: 700;
+    border-radius: 4px;
+}
+.banner-slides {
+    display: flex;
+    transition: transform 0.6s ease;
+}
+.banner-slides img {
+    flex: 0 0 100%;   /* 每张图占满一屏 */
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+}
