@@ -1,3 +1,26 @@
+* {
+    font-family: "Poppins", "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+
+.sticky-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #ffffff;
+    z-index: 9999;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* 防止内容被头部遮住 */
+body {
+    padding-top: 170px;
+}
+
+
+/* ===========================
+   Header (Logo section)
+   =========================== */
 /* ===========================
    Header (Logo section)
    =========================== */
@@ -17,17 +40,20 @@
     display: block;
 }
 
+
 /* ===========================
    Main Navigation Bar
    =========================== */
 .main-nav {
     height: 60px;
-    background: #F7CF46; /* 主色 */
+    background: #F7CF46;
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative; /* 按钮在内部定位 */
     width: 100%;
 }
+
 
 .nav-menu {
     display: flex;
@@ -36,7 +62,7 @@
 }
 
 .nav-menu a {
-    color: #1A1A1A; /* 品牌黑 */
+    color: #1A1A1A;
     text-decoration: none;
     font-size: 16px;
     transition: 0.3s ease;
@@ -47,6 +73,75 @@
     -webkit-background-clip: text;
     color: transparent;
 }
+
+/* === 汉堡按钮 === */
+.hamburger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #1A1A1A;
+    position: absolute;
+    left: 20px;
+    top: 15px;
+}
+
+/* === 小屏幕适配 === */
+@media (max-width: 768px) {
+
+    /* 让顶栏高度够放下汉堡 */
+    .top-header {
+        position: relative;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* 显示汉堡按钮 */
+    .hamburger {
+        display: block;
+    }
+
+    /* 隐藏菜单（默认） */
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        gap: 20px;
+        list-style: none;
+        width: 100%;
+        background: #F7CF46;
+        text-align: center;
+        padding: 20px 0;
+        position: absolute;
+        top: 60px;
+        left: 0;
+    }
+
+    /* 点击展开 */
+    .nav-menu.open {
+        display: flex;
+    }
+}
+
+/* 遮罩层（默认隐藏） */
+.nav-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4); /* 半透明黑色 */
+    z-index: 10;
+}
+
+/* Mobile 打开菜单时显示 */
+@media (max-width: 768px) {
+    .nav-menu.open + .nav-overlay {
+        display: block;
+    }
+}
+
 
 /* ===========================
    FOOTER
@@ -450,7 +545,7 @@
 
 .ip-note {
     margin-top: 40px;
-    color: #777;
+    color: #666;
     font-style: italic;
     font-size: 14px;
 }
