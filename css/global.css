@@ -2,6 +2,35 @@
     font-family: "Poppins", "PingFang SC", "Microsoft YaHei", sans-serif;
 }
 
+/* Add to your existing .sticky-header */
+.sticky-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;           /* Add this */
+    width: 100%;
+    z-index: 9999;
+}
+
+/* Add this rule to prevent body margin issues */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Update .main-nav to use box-sizing */
+.main-nav {
+    background: #F7CF46;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    box-sizing: border-box;  /* Add this */
+    width: 100%;             /* Add this */
+}
+
+
 
 /* Sticky 整体容器 */
 .sticky-header {
